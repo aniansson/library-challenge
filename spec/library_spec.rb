@@ -63,7 +63,18 @@ describe Library do
 
     expect(actual_book).to eq expected_book
   end
-#   it 'should allow people to search for all available books'
+
+  it 'should allow people to search for all available books' do
+    library = Library.new
+    expected_books = [
+      'Alfons och soldatpappan', 'Osynligt med Alfons', 'Pippi Långstrump', 'Pippi Långstrump går ombord'
+    ]
+
+    actual_books = library.available_books
+
+    expect(actual_books).to eq expected_books
+
+  end
 #   it 'should allow people to checkout books'
 #   it 'ensures that the return date is correct when a person borrows a book'
 end
